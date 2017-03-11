@@ -1,0 +1,438 @@
+2017-03-11 15:53:17,474 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1286)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.getDatasourceNames(GrailsHibernateUtil.java:557)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.usesDatasource(GrailsHibernateUtil.java:525)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil$usesDatasource$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.doWithRuntimeConfiguration(DefaultGrailsPlugin.java:511)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.doRuntimeConfiguration(AbstractGrailsPluginManager.java:123)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:154)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:51)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:68)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder.evaluate(HibernateMappingBuilder.groovy:62)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1260)
+	... 39 more
+2017-03-11 15:53:17,488 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:51)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:68)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder.evaluate(HibernateMappingBuilder.groovy:62)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1260)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.getDatasourceNames(GrailsHibernateUtil.java:557)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.usesDatasource(GrailsHibernateUtil.java:525)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil$usesDatasource$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.doWithRuntimeConfiguration(DefaultGrailsPlugin.java:511)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.doRuntimeConfiguration(AbstractGrailsPluginManager.java:123)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:154)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:53:17,489 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:53:17,489 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:53:17,489 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:53:17,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:53:17,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:53:17,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:53:17,490 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:58:09,894 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1286)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.getDatasourceNames(GrailsHibernateUtil.java:557)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.usesDatasource(GrailsHibernateUtil.java:525)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil$usesDatasource$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.doWithRuntimeConfiguration(DefaultGrailsPlugin.java:511)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.doRuntimeConfiguration(AbstractGrailsPluginManager.java:123)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:154)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:51)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:68)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder.evaluate(HibernateMappingBuilder.groovy:62)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1260)
+	... 39 more
+2017-03-11 15:58:09,897 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:51)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:207)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:68)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder.evaluate(HibernateMappingBuilder.groovy:62)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.AbstractGrailsDomainBinder.evaluateMapping(AbstractGrailsDomainBinder.java:1260)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.getDatasourceNames(GrailsHibernateUtil.java:557)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil.usesDatasource(GrailsHibernateUtil.java:525)
+	at org.codehaus.groovy.grails.orm.hibernate.cfg.GrailsHibernateUtil$usesDatasource$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:108)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:120)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.springsource.loaded.ri.ReflectiveInterceptor.jlrMethodInvoke(ReflectiveInterceptor.java:1270)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:90)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:324)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1207)
+	at groovy.lang.ExpandoMetaClass.invokeMethod(ExpandoMetaClass.java:1110)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1016)
+	at groovy.lang.Closure.call(Closure.java:423)
+	at groovy.lang.Closure.call(Closure.java:417)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at org.codehaus.groovy.grails.plugins.DefaultGrailsPlugin.doWithRuntimeConfiguration(DefaultGrailsPlugin.java:511)
+	at org.codehaus.groovy.grails.plugins.AbstractGrailsPluginManager.doRuntimeConfiguration(AbstractGrailsPluginManager.java:123)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:154)
+	at org.codehaus.groovy.grails.commons.spring.GrailsRuntimeConfigurator.configure(GrailsRuntimeConfigurator.java:127)
+	at org.codehaus.groovy.grails.web.context.GrailsConfigUtils.configureWebApplicationContext(GrailsConfigUtils.java:126)
+	at org.codehaus.groovy.grails.web.context.GrailsContextLoaderListener.initWebApplicationContext(GrailsContextLoaderListener.java:109)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:106)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4992)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5490)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1575)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1565)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:58:09,898 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:58:09,898 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:58:09,898 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:58:09,899 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:58:09,899 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
+2017-03-11 15:58:09,899 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-03-11 15:58:09,900 [localhost-startStop-1] ERROR StackTrace  - Full Stack Trace:
+org.codehaus.groovy.grails.exceptions.GrailsDomainException: Error evaluating ORM mappings block for domain [proyectoporcino.Cerdo]:  No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at grails.plugin.hibernate4.HibernatePluginSupport$__clinit__closure1.doCall(HibernatePluginSupport.groovy:110)
+	at grails.spring.BeanBuilder.invokeBeanDefiningClosure(BeanBuilder.java:754)
+	at grails.spring.BeanBuilder.beans(BeanBuilder.java:584)
+	at grails.spring.BeanBuilder.invokeMethod(BeanBuilder.java:527)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: groovy.lang.MissingPropertyException: No such property: id for class: org.codehaus.groovy.grails.orm.hibernate.cfg.HibernateMappingBuilder
+Possible solutions: LOG
+	at proyectoporcino.Cerdo$__clinit__closure2.doCall(Cerdo.groovy:11)
+	... 8 more
